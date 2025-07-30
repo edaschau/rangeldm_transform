@@ -1,5 +1,7 @@
 from typing import Any, Union
 from sgm.data.kitti360_range_image import point_cloud_to_range_image_KITTI
+from sgm.data.m3ed_range_image import point_cloud_to_range_image_M3ED  # Add this import
+
 # from sgm.data.stf_range_image import range_image_to_point_cloud_stf_torch
 
 import torch
@@ -160,10 +162,12 @@ class GeneralLPIPSWithDiscriminator(nn.Module):
         self.use_rec_loss_true = use_rec_loss_true
         self.use_rec_loss_true_power = use_rec_loss_true_power
         self.rec_power = rec_power
+        # Around line 160-168
         if self.kitti:
             self.to_range_image = instantiate_from_config(to_range_image) if to_range_image else point_cloud_to_range_image_KITTI()
         else:
-            raise NotImplementedError
+            # Replace the "raise NotImplementedError" with this line:
+            self.to_range_image = instantiate_from_config(to_range_image) if to_range_image else point_cloud_to_range_image_M3ED()
         if metakernel == 1:
             self.discriminator = NLayerDiscriminatorMetaKernel(
                 input_nc=disc_in_channels, 
@@ -401,6 +405,9 @@ class RangeImageReconstructionLoss(nn.Module):
         self.kitti = kitti
         if self.kitti:
             self.to_range_image = point_cloud_to_range_image_KITTI()
+        else:
+            # New implementation for non-KITTI data (M3ED)
+            self.to_range_image = instantiate_from_config(to_range_image) if to_range_image else point_cloud_to_range_image_M3ED()
         self.used_feature = used_feature
         self.learn_logvar = learn_logvar
 

@@ -132,3 +132,41 @@ class KITTIRangeLoader(RangeLoader):
                                          coord=coord)
         self.train_dataset = dataset
         self.test_dataset = test_dataset
+
+
+if __name__ == "__main__":          # <-- new helper, does NOT affect library use
+    import argparse
+    from PIL import Image
+    from .kitti360_range_image import KITTIRangeLoader  # local package import
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--root", required=True, help="KITTI-360 root folder")
+    parser.add_argument("--save", default=None, help="optional PNG output path")
+    args = parser.parse_args()
+
+    # build a tiny loader (one sample, CPU)
+    loader = KITTIRangeLoader(
+        KITTI_path=args.root,
+        batch_size=1,
+        num_workers=0,
+        shuffle=False,
+    )
+    sample = next(iter(loader.test_dataloader()))
+    rng = sample["jpg"][0]          # (C, W, H)  –- here C==2
+
+    print("Range-image tensor shape:", rng.shape)       # e.g. torch.Size([2,1024,64])
+
+    if args.save:
+        # take only channel-0 (range), un-normalize, map to 0-255 for display
+        ch0 = rng[0] * loader.test_dataset.to_range_image.std \
+                       + loader.test_dataset.to_range_image.mean
+        ch0 = ch0.cpu().numpy() 
+        img = (ch0/ ch0.max() * 255).astype("uint8").T  # H×W
+        Image.fromarray(img).save(args.save)
+        print("Saved PNG to", args.save)
+
+        ch1 = rng[1].cpu().numpy()
+        ch1_img = (ch1 / ch1.max() * 255).astype(np.uint8).T
+        inten_path = args.save.replace(".png", "_intensity.png")
+        Image.fromarray(ch1_img).save(inten_path)
+        print("Saved intensity PNG to", inten_path)
