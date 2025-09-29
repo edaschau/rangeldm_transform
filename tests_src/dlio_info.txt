@@ -1,0 +1,2 @@
+Error: Topic '/tf_static' not found in the bag.
+Available topics: ['/boxi/dlio/hesai_points_undistorted', '/boxi/dlio/lidar_map_odometry', '/tf']

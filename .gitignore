@@ -1,10 +1,27 @@
 /KITTI-360/
-
+/M3ED/
+/lidar_adaption/
+*.safetensors
+*.bag 
+/map_export/
+/merged_bag/
+/merged_clouds/
+/dlio_project/dlio_data/
+/lidar_adaption/semantic_kitti/
+/grand_tour_dataset/
+*.ckpt 
+/rangeldm/vae/logs/
+/rangeldm/ldm/outputs/
 /vae/logs/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+*.pcd 
+*.ply
+/multi-modal-loam/
+/dlio_map/
+/mmloam_ros2/
 
 # C extensions
 *.so

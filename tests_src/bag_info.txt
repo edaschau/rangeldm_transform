@@ -1,0 +1,4404 @@
+Bag file: multi-modal-loam/example_output/mm_loam_complete_output.bag
+File size: 13759.58 MB
+Duration: 91.22 seconds
+
+Measuring message sizes...
+
+Topic Size Statistics:
+================================================================================
+Topic Name                               Message Count   Data Size       Avg Size/Msg   
+--------------------------------------------------------------------------------
+/a_horizon                               905             662.94 MB       750.11 KB      
+/a_time_hori                             896             657.79 MB       751.76 KB      
+/a_time_hori_livoxmsg                    896             390.54 MB       446.34 KB      
+/a_time_union_cloud                      896             1119.53 MB      1.25 MB        
+/a_time_velo                             896             728.73 MB       832.84 KB      
+/a_velo                                  896             728.73 MB       832.84 KB      
+/clock                                   9026            70.52 KB        8.0 bytes      
+/diagnostics                             176             114.34 KB       665.2613636363636 bytes
+/hori_cloud_flat                         896             53.57 MB        61.22 KB       
+/hori_cloud_normal                       896             793.01 MB       906.29 KB      
+/hori_cloud_sharp                        896             20.66 MB        23.61 KB       
+/livox/imu                               18229           5.62 MB         323.0 bytes    
+/livox/lidar                             899             390.99 MB       445.36 KB      
+/livox_odometry_mapped                   893             627.89 KB       720.0 bytes    
+/livox_odometry_path_mapped              895             31.00 MB        35.47 KB       
+/rosout                                  36959           17.59 MB        499.040964311805 bytes
+/rosout_agg                              36946           17.59 MB        499.1843771991555 bytes
+/scan                                    891             6.15 MB         7.07 KB        
+/tf                                      1348            132.08 KB       100.3360534124629 bytes
+/tf_static                               1               99 bytes        99.0 bytes     
+/union_feature_cloud                     896             2483.60 MB      2.77 MB        
+/velo_cloud_flat                         896             763.73 MB       872.84 KB      
+/velo_cloud_normal                       892             835.03 MB       958.59 KB      
+/velo_cloud_sharp                        896             13.62 MB        15.56 KB       
+/velo_corner_map                         895             99.81 MB        114.20 KB      
+/velo_fov_cloud                          896             175.73 MB       200.84 KB      
+/velo_full_cloud_mapped                  895             1508.45 MB      1.69 MB        
+/velo_surf_map                           895             162.57 MB       186.00 KB      
+/velo_undistort_cloud_raw                895             1508.45 MB      1.69 MB        
+/velodyne_nodelet_manager/bond           540             73.83 KB        140.0 bytes    
+/velodyne_nodelet_manager_driver/parameter_descriptions 1               475 bytes       475.0 bytes    
+/velodyne_nodelet_manager_driver/parameter_updates 1               75 bytes        75.0 bytes     
+/velodyne_nodelet_manager_laserscan/parameter_descriptions 1               393 bytes       393.0 bytes    
+/velodyne_nodelet_manager_laserscan/parameter_updates 1               74 bytes        74.0 bytes     
+/velodyne_nodelet_manager_transform/parameter_descriptions 1               1.15 KB         1.15 KB        
+/velodyne_nodelet_manager_transform/parameter_updates 1               188 bytes       188.0 bytes    
+/velodyne_packets                        891             78.42 MB        90.13 KB       
+/velodyne_points                         882             493.77 MB       573.27 KB      
+--------------------------------------------------------------------------------
+TOTAL                                    124711          13748.63 MB     112.89 KB      
+
+Measured data size: 13748.63 MB
+Total bag file size: 13759.58 MB
+Difference (metadata, indices, etc.): 10.94 MB
+{'/a_horizon': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=905, connections=[Connection(id=9, topic='/a_horizon', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=905, ext=ConnectionExtRosbag1(callerid='/mm_lidarsAligner', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/a_time_hori': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=896, connections=[Connection(id=13, topic='/a_time_hori', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_lidarsAligner', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/a_time_hori_livoxmsg': TopicInfo(msgtype='livox_ros_driver/msg/CustomMsg', msgdef="# Livox publish pointcloud msg format.
+
+Header header             # ROS standard message header
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
+
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: livox_ros_driver/CustomPoint
+# Livox costom pointcloud format.
+
+uint32 offset_time      # offset time relative to the base time
+float32 x               # X axis, unit:m
+float32 y               # Y axis, unit:m
+float32 z               # Z axis, unit:m
+uint8 reflectivity      # reflectivity, 0~255
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
+
+", msgcount=896, connections=[Connection(id=12, topic='/a_time_hori_livoxmsg', msgtype='livox_ros_driver/msg/CustomMsg', msgdef="# Livox publish pointcloud msg format.
+
+Header header             # ROS standard message header
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
+
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: livox_ros_driver/CustomPoint
+# Livox costom pointcloud format.
+
+uint32 offset_time      # offset time relative to the base time
+float32 x               # X axis, unit:m
+float32 y               # Y axis, unit:m
+float32 z               # Z axis, unit:m
+uint8 reflectivity      # reflectivity, 0~255
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
+
+", digest='e4d6829bdfe657cb6c21a746c86b21a6', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_lidarsAligner', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/a_time_union_cloud': TopicInfo(msgtype='union_cloud/msg/union_cloud', msgdef='Header header
+
+# Velo Point cloud messages
+sensor_msgs/PointCloud2 velo_time_aligned
+sensor_msgs/PointCloud2 velo_corner
+sensor_msgs/PointCloud2 velo_surface
+sensor_msgs/PointCloud2 velo_combine
+int64 velo_corner_num
+int64 velo_surf_num
+
+
+# LivoxPoint cloud messages
+livox_ros_driver/CustomMsg livox_time_aligned
+sensor_msgs/PointCloud2 livox_corner
+sensor_msgs/PointCloud2 livox_surface
+sensor_msgs/PointCloud2 livox_combine
+int64 livox_corner_num
+int64 livox_surf_num
+
+
+#
+bool livo_degenerated_env
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointCloud2
+# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+
+================================================================================
+MSG: livox_ros_driver/CustomMsg
+# Livox publish pointcloud msg format.
+
+Header header             # ROS standard message header
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
+
+
+================================================================================
+MSG: livox_ros_driver/CustomPoint
+# Livox costom pointcloud format.
+
+uint32 offset_time      # offset time relative to the base time
+float32 x               # X axis, unit:m
+float32 y               # Y axis, unit:m
+float32 z               # Z axis, unit:m
+uint8 reflectivity      # reflectivity, 0~255
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
+
+', msgcount=896, connections=[Connection(id=15, topic='/a_time_union_cloud', msgtype='union_cloud/msg/union_cloud', msgdef='Header header
+
+# Velo Point cloud messages
+sensor_msgs/PointCloud2 velo_time_aligned
+sensor_msgs/PointCloud2 velo_corner
+sensor_msgs/PointCloud2 velo_surface
+sensor_msgs/PointCloud2 velo_combine
+int64 velo_corner_num
+int64 velo_surf_num
+
+
+# LivoxPoint cloud messages
+livox_ros_driver/CustomMsg livox_time_aligned
+sensor_msgs/PointCloud2 livox_corner
+sensor_msgs/PointCloud2 livox_surface
+sensor_msgs/PointCloud2 livox_combine
+int64 livox_corner_num
+int64 livox_surf_num
+
+
+#
+bool livo_degenerated_env
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointCloud2
+# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+
+================================================================================
+MSG: livox_ros_driver/CustomMsg
+# Livox publish pointcloud msg format.
+
+Header header             # ROS standard message header
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
+
+
+================================================================================
+MSG: livox_ros_driver/CustomPoint
+# Livox costom pointcloud format.
+
+uint32 offset_time      # offset time relative to the base time
+float32 x               # X axis, unit:m
+float32 y               # Y axis, unit:m
+float32 z               # Z axis, unit:m
+uint8 reflectivity      # reflectivity, 0~255
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
+
+', digest='9d94bd656f640b753fe66e7373903868', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_lidarsAligner', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/a_time_velo': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=896, connections=[Connection(id=14, topic='/a_time_velo', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_lidarsAligner', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/a_velo': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=896, connections=[Connection(id=11, topic='/a_velo', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_lidarsAligner', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/clock': TopicInfo(msgtype='rosgraph_msgs/msg/Clock', msgdef='# roslib/Clock is used for publishing simulated time in ROS. 
+# This message simply communicates the current time.
+# For more information, see http://www.ros.org/wiki/Clock
+time clock
+', msgcount=9026, connections=[Connection(id=5, topic='/clock', msgtype='rosgraph_msgs/msg/Clock', msgdef='# roslib/Clock is used for publishing simulated time in ROS. 
+# This message simply communicates the current time.
+# For more information, see http://www.ros.org/wiki/Clock
+time clock
+', digest='a9c97c1d230cfc112e270351a944ee47', msgcount=9026, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/diagnostics': TopicInfo(msgtype='diagnostic_msgs/msg/DiagnosticArray', msgdef="# This message is used to send diagnostic information about the state of the robot
+Header header #for timestamp
+DiagnosticStatus[] status # an array of components being reported on
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: diagnostic_msgs/DiagnosticStatus
+# This message holds the status of an individual component of the robot.
+# 
+
+# Possible levels of operations
+byte OK=0
+byte WARN=1
+byte ERROR=2
+byte STALE=3
+
+byte level # level of operation enumerated above 
+string name # a description of the test/component reporting
+string message # a description of the status
+string hardware_id # a hardware unique string
+KeyValue[] values # an array of values associated with the status
+
+
+================================================================================
+MSG: diagnostic_msgs/KeyValue
+string key # what to label this value when viewing
+string value # a value to track over time
+", msgcount=176, connections=[Connection(id=43, topic='/diagnostics', msgtype='diagnostic_msgs/msg/DiagnosticArray', msgdef="# This message is used to send diagnostic information about the state of the robot
+Header header #for timestamp
+DiagnosticStatus[] status # an array of components being reported on
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: diagnostic_msgs/DiagnosticStatus
+# This message holds the status of an individual component of the robot.
+# 
+
+# Possible levels of operations
+byte OK=0
+byte WARN=1
+byte ERROR=2
+byte STALE=3
+
+byte level # level of operation enumerated above 
+string name # a description of the test/component reporting
+string message # a description of the status
+string hardware_id # a hardware unique string
+KeyValue[] values # an array of values associated with the status
+
+
+================================================================================
+MSG: diagnostic_msgs/KeyValue
+string key # what to label this value when viewing
+string value # a value to track over time
+", digest='60810da900de1dd6ddd437c3503511da', msgcount=176, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/hori_cloud_flat': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=896, connections=[Connection(id=17, topic='/hori_cloud_flat', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_scanRegistration', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/hori_cloud_normal': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=896, connections=[Connection(id=18, topic='/hori_cloud_normal', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_scanRegistration', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/hori_cloud_sharp': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=896, connections=[Connection(id=16, topic='/hori_cloud_sharp', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_scanRegistration', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/livox/imu': TopicInfo(msgtype='sensor_msgs/msg/Imu', msgdef='# This is a message to hold data from an IMU (Inertial Measurement Unit)
+#
+# Accelerations should be in m/s^2 (not in g\'s), and rotational velocity should be in rad/sec
+#
+# If the covariance of the measurement is known, it should be filled in (if all you know is the 
+# variance of each measurement, e.g. from the datasheet, just put those along the diagonal)
+# A covariance matrix of all zeros will be interpreted as "covariance unknown", and to use the
+# data a covariance will have to be assumed or gotten from some other source
+#
+# If you have no estimate for one of the data elements (e.g. your IMU doesn\'t produce an orientation 
+# estimate), please set element 0 of the associated covariance matrix to -1
+# If you are interpreting this message, please check for a value of -1 in the first element of each 
+# covariance matrix, and disregard the associated estimate.
+
+Header header
+
+geometry_msgs/Quaternion orientation
+float64[9] orientation_covariance # Row major about x, y, z axes
+
+geometry_msgs/Vector3 angular_velocity
+float64[9] angular_velocity_covariance # Row major about x, y, z axes
+
+geometry_msgs/Vector3 linear_acceleration
+float64[9] linear_acceleration_covariance # Row major x, y z 
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space. 
+# It is only meant to represent a direction. Therefore, it does not
+# make sense to apply a translation to it (e.g., when applying a 
+# generic rigid transformation to a Vector3, tf2 will only apply the
+# rotation). If you want your data to be translatable too, use the
+# geometry_msgs/Point message instead.
+
+float64 x
+float64 y
+float64 z
+', msgcount=18229, connections=[Connection(id=35, topic='/livox/imu', msgtype='sensor_msgs/msg/Imu', msgdef='# This is a message to hold data from an IMU (Inertial Measurement Unit)
+#
+# Accelerations should be in m/s^2 (not in g\'s), and rotational velocity should be in rad/sec
+#
+# If the covariance of the measurement is known, it should be filled in (if all you know is the 
+# variance of each measurement, e.g. from the datasheet, just put those along the diagonal)
+# A covariance matrix of all zeros will be interpreted as "covariance unknown", and to use the
+# data a covariance will have to be assumed or gotten from some other source
+#
+# If you have no estimate for one of the data elements (e.g. your IMU doesn\'t produce an orientation 
+# estimate), please set element 0 of the associated covariance matrix to -1
+# If you are interpreting this message, please check for a value of -1 in the first element of each 
+# covariance matrix, and disregard the associated estimate.
+
+Header header
+
+geometry_msgs/Quaternion orientation
+float64[9] orientation_covariance # Row major about x, y, z axes
+
+geometry_msgs/Vector3 angular_velocity
+float64[9] angular_velocity_covariance # Row major about x, y, z axes
+
+geometry_msgs/Vector3 linear_acceleration
+float64[9] linear_acceleration_covariance # Row major x, y z 
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space. 
+# It is only meant to represent a direction. Therefore, it does not
+# make sense to apply a translation to it (e.g., when applying a 
+# generic rigid transformation to a Vector3, tf2 will only apply the
+# rotation). If you want your data to be translatable too, use the
+# geometry_msgs/Point message instead.
+
+float64 x
+float64 y
+float64 z
+', digest='6a62c6daae103f4ff57a132d6f95cec2', msgcount=18229, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/livox/lidar': TopicInfo(msgtype='livox_ros_driver/msg/CustomMsg', msgdef="# Livox publish pointcloud msg format.
+
+Header header             # ROS standard message header
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
+
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: livox_ros_driver/CustomPoint
+# Livox costom pointcloud format.
+
+uint32 offset_time      # offset time relative to the base time
+float32 x               # X axis, unit:m
+float32 y               # Y axis, unit:m
+float32 z               # Z axis, unit:m
+uint8 reflectivity      # reflectivity, 0~255
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
+
+", msgcount=899, connections=[Connection(id=36, topic='/livox/lidar', msgtype='livox_ros_driver/msg/CustomMsg', msgdef="# Livox publish pointcloud msg format.
+
+Header header             # ROS standard message header
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
+
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: livox_ros_driver/CustomPoint
+# Livox costom pointcloud format.
+
+uint32 offset_time      # offset time relative to the base time
+float32 x               # X axis, unit:m
+float32 y               # Y axis, unit:m
+float32 z               # Z axis, unit:m
+uint8 reflectivity      # reflectivity, 0~255
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
+
+", digest='e4d6829bdfe657cb6c21a746c86b21a6', msgcount=899, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/livox_odometry_mapped': TopicInfo(msgtype='nav_msgs/msg/Odometry', msgdef="# This represents an estimate of a position and velocity in free space.  
+# The pose in this message should be specified in the coordinate frame given by header.frame_id.
+# The twist in this message should be specified in the coordinate frame given by the child_frame_id
+Header header
+string child_frame_id
+geometry_msgs/PoseWithCovariance pose
+geometry_msgs/TwistWithCovariance twist
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/PoseWithCovariance
+# This represents a pose in free space with uncertainty.
+
+Pose pose
+
+# Row-major representation of the 6x6 covariance matrix
+# The orientation parameters use a fixed-axis representation.
+# In order, the parameters are:
+# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
+float64[36] covariance
+
+================================================================================
+MSG: geometry_msgs/Pose
+# A representation of pose in free space, composed of position and orientation. 
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+
+================================================================================
+MSG: geometry_msgs/TwistWithCovariance
+# This expresses velocity in free space with uncertainty.
+
+Twist twist
+
+# Row-major representation of the 6x6 covariance matrix
+# The orientation parameters use a fixed-axis representation.
+# In order, the parameters are:
+# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
+float64[36] covariance
+
+================================================================================
+MSG: geometry_msgs/Twist
+# This expresses velocity in free space broken into its linear and angular parts.
+Vector3  linear
+Vector3  angular
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space. 
+# It is only meant to represent a direction. Therefore, it does not
+# make sense to apply a translation to it (e.g., when applying a 
+# generic rigid transformation to a Vector3, tf2 will only apply the
+# rotation). If you want your data to be translatable too, use the
+# geometry_msgs/Point message instead.
+
+float64 x
+float64 y
+float64 z
+", msgcount=893, connections=[Connection(id=38, topic='/livox_odometry_mapped', msgtype='nav_msgs/msg/Odometry', msgdef="# This represents an estimate of a position and velocity in free space.  
+# The pose in this message should be specified in the coordinate frame given by header.frame_id.
+# The twist in this message should be specified in the coordinate frame given by the child_frame_id
+Header header
+string child_frame_id
+geometry_msgs/PoseWithCovariance pose
+geometry_msgs/TwistWithCovariance twist
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/PoseWithCovariance
+# This represents a pose in free space with uncertainty.
+
+Pose pose
+
+# Row-major representation of the 6x6 covariance matrix
+# The orientation parameters use a fixed-axis representation.
+# In order, the parameters are:
+# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
+float64[36] covariance
+
+================================================================================
+MSG: geometry_msgs/Pose
+# A representation of pose in free space, composed of position and orientation. 
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+
+================================================================================
+MSG: geometry_msgs/TwistWithCovariance
+# This expresses velocity in free space with uncertainty.
+
+Twist twist
+
+# Row-major representation of the 6x6 covariance matrix
+# The orientation parameters use a fixed-axis representation.
+# In order, the parameters are:
+# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
+float64[36] covariance
+
+================================================================================
+MSG: geometry_msgs/Twist
+# This expresses velocity in free space broken into its linear and angular parts.
+Vector3  linear
+Vector3  angular
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space. 
+# It is only meant to represent a direction. Therefore, it does not
+# make sense to apply a translation to it (e.g., when applying a 
+# generic rigid transformation to a Vector3, tf2 will only apply the
+# rotation). If you want your data to be translatable too, use the
+# geometry_msgs/Point message instead.
+
+float64 x
+float64 y
+float64 z
+", digest='cd5e73d190d741a2f92e81eda573aca7', msgcount=893, ext=ConnectionExtRosbag1(callerid='/mm_PoseEstimation', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/livox_odometry_path_mapped': TopicInfo(msgtype='nav_msgs/msg/Path', msgdef="#An array of poses that represents a Path for a robot to follow
+Header header
+geometry_msgs/PoseStamped[] poses
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/PoseStamped
+# A Pose with reference coordinate frame and timestamp
+Header header
+Pose pose
+
+================================================================================
+MSG: geometry_msgs/Pose
+# A representation of pose in free space, composed of position and orientation. 
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+", msgcount=895, connections=[Connection(id=24, topic='/livox_odometry_path_mapped', msgtype='nav_msgs/msg/Path', msgdef="#An array of poses that represents a Path for a robot to follow
+Header header
+geometry_msgs/PoseStamped[] poses
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/PoseStamped
+# A Pose with reference coordinate frame and timestamp
+Header header
+Pose pose
+
+================================================================================
+MSG: geometry_msgs/Pose
+# A representation of pose in free space, composed of position and orientation. 
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+", digest='6227e2b7e9cce15051f669a5e197bbf7', msgcount=895, ext=ConnectionExtRosbag1(callerid='/mm_PoseEstimation', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/rosout': TopicInfo(msgtype='rosgraph_msgs/msg/Log', msgdef="##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", msgcount=36959, connections=[Connection(id=0, topic='/rosout', msgtype='rosgraph_msgs/msg/Log', msgdef="##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", digest='acffd30cd6b6de30f120938c17c593fb', msgcount=27, ext=ConnectionExtRosbag1(callerid='/output_recorder', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>), Connection(id=2, topic='/rosout', msgtype='rosgraph_msgs/msg/Log', msgdef="##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", digest='acffd30cd6b6de30f120938c17c593fb', msgcount=5392, ext=ConnectionExtRosbag1(callerid='/mm_lidarsAligner', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>), Connection(id=3, topic='/rosout', msgtype='rosgraph_msgs/msg/Log', msgdef="##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", digest='acffd30cd6b6de30f120938c17c593fb', msgcount=1793, ext=ConnectionExtRosbag1(callerid='/mm_scanRegistration', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>), Connection(id=4, topic='/rosout', msgtype='rosgraph_msgs/msg/Log', msgdef="##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", digest='acffd30cd6b6de30f120938c17c593fb', msgcount=10, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>), Connection(id=22, topic='/rosout', msgtype='rosgraph_msgs/msg/Log', msgdef="##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", digest='acffd30cd6b6de30f120938c17c593fb', msgcount=29737, ext=ConnectionExtRosbag1(callerid='/mm_PoseEstimation', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/rosout_agg': TopicInfo(msgtype='rosgraph_msgs/msg/Log', msgdef="##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", msgcount=36946, connections=[Connection(id=6, topic='/rosout_agg', msgtype='rosgraph_msgs/msg/Log', msgdef="##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", digest='acffd30cd6b6de30f120938c17c593fb', msgcount=36942, ext=ConnectionExtRosbag1(callerid='/rosout', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>), Connection(id=7, topic='/rosout_agg', msgtype='rosgraph_msgs/msg/Log', msgdef="##
+## Severity level constants
+##
+byte DEBUG=1 #debug level
+byte INFO=2  #general level
+byte WARN=4  #warning level
+byte ERROR=8 #error level
+byte FATAL=16 #fatal/critical level
+##
+## Fields
+##
+Header header
+byte level
+string name # name of the node
+string msg # message 
+string file # file the message came from
+string function # function the message came from
+uint32 line # line the message came from
+string[] topics # topic names that the node publishes
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", digest='acffd30cd6b6de30f120938c17c593fb', msgcount=4, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/scan': TopicInfo(msgtype='sensor_msgs/msg/LaserScan', msgdef="# Single scan from a planar laser range-finder
+#
+# If you have another ranging device with different behavior (e.g. a sonar
+# array), please find or create a different message, since applications
+# will make fairly laser-specific assumptions about this data
+
+Header header            # timestamp in the header is the acquisition time of 
+                         # the first ray in the scan.
+                         #
+                         # in frame frame_id, angles are measured around 
+                         # the positive Z axis (counterclockwise, if Z is up)
+                         # with zero angle being forward along the x axis
+                         
+float32 angle_min        # start angle of the scan [rad]
+float32 angle_max        # end angle of the scan [rad]
+float32 angle_increment  # angular distance between measurements [rad]
+
+float32 time_increment   # time between measurements [seconds] - if your scanner
+                         # is moving, this will be used in interpolating position
+                         # of 3d points
+float32 scan_time        # time between scans [seconds]
+
+float32 range_min        # minimum range value [m]
+float32 range_max        # maximum range value [m]
+
+float32[] ranges         # range data [m] (Note: values < range_min or > range_max should be discarded)
+float32[] intensities    # intensity data [device-specific units].  If your
+                         # device does not provide intensities, please leave
+                         # the array empty.
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", msgcount=891, connections=[Connection(id=34, topic='/scan', msgtype='sensor_msgs/msg/LaserScan', msgdef="# Single scan from a planar laser range-finder
+#
+# If you have another ranging device with different behavior (e.g. a sonar
+# array), please find or create a different message, since applications
+# will make fairly laser-specific assumptions about this data
+
+Header header            # timestamp in the header is the acquisition time of 
+                         # the first ray in the scan.
+                         #
+                         # in frame frame_id, angles are measured around 
+                         # the positive Z axis (counterclockwise, if Z is up)
+                         # with zero angle being forward along the x axis
+                         
+float32 angle_min        # start angle of the scan [rad]
+float32 angle_max        # end angle of the scan [rad]
+float32 angle_increment  # angular distance between measurements [rad]
+
+float32 time_increment   # time between measurements [seconds] - if your scanner
+                         # is moving, this will be used in interpolating position
+                         # of 3d points
+float32 scan_time        # time between scans [seconds]
+
+float32 range_min        # minimum range value [m]
+float32 range_max        # maximum range value [m]
+
+float32[] ranges         # range data [m] (Note: values < range_min or > range_max should be discarded)
+float32[] intensities    # intensity data [device-specific units].  If your
+                         # device does not provide intensities, please leave
+                         # the array empty.
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", digest='90c7ef2dc6895d81024acba2ac42f369', msgcount=891, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/tf': TopicInfo(msgtype='tf2_msgs/msg/TFMessage', msgdef='geometry_msgs/TransformStamped[] transforms
+
+================================================================================
+MSG: geometry_msgs/TransformStamped
+# This expresses a transform from coordinate frame header.frame_id
+# to the coordinate frame child_frame_id
+#
+# This message is mostly used by the 
+# <a href="http://wiki.ros.org/tf">tf</a> package. 
+# See its documentation for more information.
+
+Header header
+string child_frame_id # the frame id of the child frame
+Transform transform
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/Transform
+# This represents the transform between two coordinate frames in free space.
+
+Vector3 translation
+Quaternion rotation
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space. 
+# It is only meant to represent a direction. Therefore, it does not
+# make sense to apply a translation to it (e.g., when applying a 
+# generic rigid transformation to a Vector3, tf2 will only apply the
+# rotation). If you want your data to be translatable too, use the
+# geometry_msgs/Point message instead.
+
+float64 x
+float64 y
+float64 z
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+', msgcount=1348, connections=[Connection(id=8, topic='/tf', msgtype='tf2_msgs/msg/TFMessage', msgdef='geometry_msgs/TransformStamped[] transforms
+
+================================================================================
+MSG: geometry_msgs/TransformStamped
+# This expresses a transform from coordinate frame header.frame_id
+# to the coordinate frame child_frame_id
+#
+# This message is mostly used by the 
+# <a href="http://wiki.ros.org/tf">tf</a> package. 
+# See its documentation for more information.
+
+Header header
+string child_frame_id # the frame id of the child frame
+Transform transform
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/Transform
+# This represents the transform between two coordinate frames in free space.
+
+Vector3 translation
+Quaternion rotation
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space. 
+# It is only meant to represent a direction. Therefore, it does not
+# make sense to apply a translation to it (e.g., when applying a 
+# generic rigid transformation to a Vector3, tf2 will only apply the
+# rotation). If you want your data to be translatable too, use the
+# geometry_msgs/Point message instead.
+
+float64 x
+float64 y
+float64 z
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+', digest='94810edda583a504dfda3829e70d7eec', msgcount=453, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>), Connection(id=25, topic='/tf', msgtype='tf2_msgs/msg/TFMessage', msgdef='geometry_msgs/TransformStamped[] transforms
+
+================================================================================
+MSG: geometry_msgs/TransformStamped
+# This expresses a transform from coordinate frame header.frame_id
+# to the coordinate frame child_frame_id
+#
+# This message is mostly used by the 
+# <a href="http://wiki.ros.org/tf">tf</a> package. 
+# See its documentation for more information.
+
+Header header
+string child_frame_id # the frame id of the child frame
+Transform transform
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/Transform
+# This represents the transform between two coordinate frames in free space.
+
+Vector3 translation
+Quaternion rotation
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space. 
+# It is only meant to represent a direction. Therefore, it does not
+# make sense to apply a translation to it (e.g., when applying a 
+# generic rigid transformation to a Vector3, tf2 will only apply the
+# rotation). If you want your data to be translatable too, use the
+# geometry_msgs/Point message instead.
+
+float64 x
+float64 y
+float64 z
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+', digest='94810edda583a504dfda3829e70d7eec', msgcount=895, ext=ConnectionExtRosbag1(callerid='/mm_PoseEstimation', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/tf_static': TopicInfo(msgtype='tf2_msgs/msg/TFMessage', msgdef='geometry_msgs/TransformStamped[] transforms
+
+================================================================================
+MSG: geometry_msgs/TransformStamped
+# This expresses a transform from coordinate frame header.frame_id
+# to the coordinate frame child_frame_id
+#
+# This message is mostly used by the 
+# <a href="http://wiki.ros.org/tf">tf</a> package. 
+# See its documentation for more information.
+
+Header header
+string child_frame_id # the frame id of the child frame
+Transform transform
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/Transform
+# This represents the transform between two coordinate frames in free space.
+
+Vector3 translation
+Quaternion rotation
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space. 
+# It is only meant to represent a direction. Therefore, it does not
+# make sense to apply a translation to it (e.g., when applying a 
+# generic rigid transformation to a Vector3, tf2 will only apply the
+# rotation). If you want your data to be translatable too, use the
+# geometry_msgs/Point message instead.
+
+float64 x
+float64 y
+float64 z
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+', msgcount=1, connections=[Connection(id=1, topic='/tf_static', msgtype='tf2_msgs/msg/TFMessage', msgdef='geometry_msgs/TransformStamped[] transforms
+
+================================================================================
+MSG: geometry_msgs/TransformStamped
+# This expresses a transform from coordinate frame header.frame_id
+# to the coordinate frame child_frame_id
+#
+# This message is mostly used by the 
+# <a href="http://wiki.ros.org/tf">tf</a> package. 
+# See its documentation for more information.
+
+Header header
+string child_frame_id # the frame id of the child frame
+Transform transform
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: geometry_msgs/Transform
+# This represents the transform between two coordinate frames in free space.
+
+Vector3 translation
+Quaternion rotation
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space. 
+# It is only meant to represent a direction. Therefore, it does not
+# make sense to apply a translation to it (e.g., when applying a 
+# generic rigid transformation to a Vector3, tf2 will only apply the
+# rotation). If you want your data to be translatable too, use the
+# geometry_msgs/Point message instead.
+
+float64 x
+float64 y
+float64 z
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x
+float64 y
+float64 z
+float64 w
+', digest='94810edda583a504dfda3829e70d7eec', msgcount=1, ext=ConnectionExtRosbag1(callerid='/robot_state_publisher', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/union_feature_cloud': TopicInfo(msgtype='union_cloud/msg/union_cloud', msgdef='Header header
+
+# Velo Point cloud messages
+sensor_msgs/PointCloud2 velo_time_aligned
+sensor_msgs/PointCloud2 velo_corner
+sensor_msgs/PointCloud2 velo_surface
+sensor_msgs/PointCloud2 velo_combine
+int64 velo_corner_num
+int64 velo_surf_num
+
+
+# LivoxPoint cloud messages
+livox_ros_driver/CustomMsg livox_time_aligned
+sensor_msgs/PointCloud2 livox_corner
+sensor_msgs/PointCloud2 livox_surface
+sensor_msgs/PointCloud2 livox_combine
+int64 livox_corner_num
+int64 livox_surf_num
+
+
+#
+bool livo_degenerated_env
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointCloud2
+# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+
+================================================================================
+MSG: livox_ros_driver/CustomMsg
+# Livox publish pointcloud msg format.
+
+Header header             # ROS standard message header
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
+
+
+================================================================================
+MSG: livox_ros_driver/CustomPoint
+# Livox costom pointcloud format.
+
+uint32 offset_time      # offset time relative to the base time
+float32 x               # X axis, unit:m
+float32 y               # Y axis, unit:m
+float32 z               # Z axis, unit:m
+uint8 reflectivity      # reflectivity, 0~255
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
+
+', msgcount=896, connections=[Connection(id=21, topic='/union_feature_cloud', msgtype='union_cloud/msg/union_cloud', msgdef='Header header
+
+# Velo Point cloud messages
+sensor_msgs/PointCloud2 velo_time_aligned
+sensor_msgs/PointCloud2 velo_corner
+sensor_msgs/PointCloud2 velo_surface
+sensor_msgs/PointCloud2 velo_combine
+int64 velo_corner_num
+int64 velo_surf_num
+
+
+# LivoxPoint cloud messages
+livox_ros_driver/CustomMsg livox_time_aligned
+sensor_msgs/PointCloud2 livox_corner
+sensor_msgs/PointCloud2 livox_surface
+sensor_msgs/PointCloud2 livox_combine
+int64 livox_corner_num
+int64 livox_surf_num
+
+
+#
+bool livo_degenerated_env
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointCloud2
+# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+
+================================================================================
+MSG: livox_ros_driver/CustomMsg
+# Livox publish pointcloud msg format.
+
+Header header             # ROS standard message header
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
+
+
+================================================================================
+MSG: livox_ros_driver/CustomPoint
+# Livox costom pointcloud format.
+
+uint32 offset_time      # offset time relative to the base time
+float32 x               # X axis, unit:m
+float32 y               # Y axis, unit:m
+float32 z               # Z axis, unit:m
+uint8 reflectivity      # reflectivity, 0~255
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
+
+', digest='9d94bd656f640b753fe66e7373903868', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_scanRegistration', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velo_cloud_flat': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=896, connections=[Connection(id=20, topic='/velo_cloud_flat', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_scanRegistration', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velo_cloud_normal': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=892, connections=[Connection(id=37, topic='/velo_cloud_normal', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=892, ext=ConnectionExtRosbag1(callerid='/mm_scanRegistration', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velo_cloud_sharp': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=896, connections=[Connection(id=19, topic='/velo_cloud_sharp', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_scanRegistration', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velo_corner_map': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=895, connections=[Connection(id=27, topic='/velo_corner_map', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=895, ext=ConnectionExtRosbag1(callerid='/mm_PoseEstimation', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velo_fov_cloud': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=896, connections=[Connection(id=10, topic='/velo_fov_cloud', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=896, ext=ConnectionExtRosbag1(callerid='/mm_lidarsAligner', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velo_full_cloud_mapped': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=895, connections=[Connection(id=28, topic='/velo_full_cloud_mapped', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=895, ext=ConnectionExtRosbag1(callerid='/mm_PoseEstimation', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velo_surf_map': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=895, connections=[Connection(id=26, topic='/velo_surf_map', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=895, ext=ConnectionExtRosbag1(callerid='/mm_PoseEstimation', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velo_undistort_cloud_raw': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=895, connections=[Connection(id=23, topic='/velo_undistort_cloud_raw', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=895, ext=ConnectionExtRosbag1(callerid='/mm_PoseEstimation', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velodyne_nodelet_manager/bond': TopicInfo(msgtype='bond/msg/Status', msgdef="Header header
+string id  # ID of the bond
+string instance_id  # Unique ID for an individual in a bond
+bool active
+
+# Including the timeouts for the bond makes it easier to debug mis-matches
+# between the two sides.
+float32 heartbeat_timeout
+float32 heartbeat_period
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", msgcount=540, connections=[Connection(id=39, topic='/velodyne_nodelet_manager/bond', msgtype='bond/msg/Status', msgdef="Header header
+string id  # ID of the bond
+string instance_id  # Unique ID for an individual in a bond
+bool active
+
+# Including the timeouts for the bond makes it easier to debug mis-matches
+# between the two sides.
+float32 heartbeat_timeout
+float32 heartbeat_period
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+", digest='eacc84bf5d65b6777d4c50f463dfb9c8', msgcount=540, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velodyne_nodelet_manager_driver/parameter_descriptions': TopicInfo(msgtype='dynamic_reconfigure/msg/ConfigDescription', msgdef='Group[] groups
+Config max
+Config min
+Config dflt
+
+================================================================================
+MSG: dynamic_reconfigure/Group
+string name
+string type
+ParamDescription[] parameters
+int32 parent 
+int32 id
+
+================================================================================
+MSG: dynamic_reconfigure/ParamDescription
+string name
+string type
+uint32 level
+string description
+string edit_method
+
+================================================================================
+MSG: dynamic_reconfigure/Config
+BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', msgcount=1, connections=[Connection(id=41, topic='/velodyne_nodelet_manager_driver/parameter_descriptions', msgtype='dynamic_reconfigure/msg/ConfigDescription', msgdef='Group[] groups
+Config max
+Config min
+Config dflt
+
+================================================================================
+MSG: dynamic_reconfigure/Group
+string name
+string type
+ParamDescription[] parameters
+int32 parent 
+int32 id
+
+================================================================================
+MSG: dynamic_reconfigure/ParamDescription
+string name
+string type
+uint32 level
+string description
+string edit_method
+
+================================================================================
+MSG: dynamic_reconfigure/Config
+BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', digest='757ce9d44ba8ddd801bb30bc456f946f', msgcount=1, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velodyne_nodelet_manager_driver/parameter_updates': TopicInfo(msgtype='dynamic_reconfigure/msg/Config', msgdef='BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', msgcount=1, connections=[Connection(id=29, topic='/velodyne_nodelet_manager_driver/parameter_updates', msgtype='dynamic_reconfigure/msg/Config', msgdef='BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', digest='958f16a05573709014982821e6822580', msgcount=1, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velodyne_nodelet_manager_laserscan/parameter_descriptions': TopicInfo(msgtype='dynamic_reconfigure/msg/ConfigDescription', msgdef='Group[] groups
+Config max
+Config min
+Config dflt
+
+================================================================================
+MSG: dynamic_reconfigure/Group
+string name
+string type
+ParamDescription[] parameters
+int32 parent 
+int32 id
+
+================================================================================
+MSG: dynamic_reconfigure/ParamDescription
+string name
+string type
+uint32 level
+string description
+string edit_method
+
+================================================================================
+MSG: dynamic_reconfigure/Config
+BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', msgcount=1, connections=[Connection(id=32, topic='/velodyne_nodelet_manager_laserscan/parameter_descriptions', msgtype='dynamic_reconfigure/msg/ConfigDescription', msgdef='Group[] groups
+Config max
+Config min
+Config dflt
+
+================================================================================
+MSG: dynamic_reconfigure/Group
+string name
+string type
+ParamDescription[] parameters
+int32 parent 
+int32 id
+
+================================================================================
+MSG: dynamic_reconfigure/ParamDescription
+string name
+string type
+uint32 level
+string description
+string edit_method
+
+================================================================================
+MSG: dynamic_reconfigure/Config
+BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', digest='757ce9d44ba8ddd801bb30bc456f946f', msgcount=1, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velodyne_nodelet_manager_laserscan/parameter_updates': TopicInfo(msgtype='dynamic_reconfigure/msg/Config', msgdef='BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', msgcount=1, connections=[Connection(id=31, topic='/velodyne_nodelet_manager_laserscan/parameter_updates', msgtype='dynamic_reconfigure/msg/Config', msgdef='BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', digest='958f16a05573709014982821e6822580', msgcount=1, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velodyne_nodelet_manager_transform/parameter_descriptions': TopicInfo(msgtype='dynamic_reconfigure/msg/ConfigDescription', msgdef='Group[] groups
+Config max
+Config min
+Config dflt
+
+================================================================================
+MSG: dynamic_reconfigure/Group
+string name
+string type
+ParamDescription[] parameters
+int32 parent 
+int32 id
+
+================================================================================
+MSG: dynamic_reconfigure/ParamDescription
+string name
+string type
+uint32 level
+string description
+string edit_method
+
+================================================================================
+MSG: dynamic_reconfigure/Config
+BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', msgcount=1, connections=[Connection(id=42, topic='/velodyne_nodelet_manager_transform/parameter_descriptions', msgtype='dynamic_reconfigure/msg/ConfigDescription', msgdef='Group[] groups
+Config max
+Config min
+Config dflt
+
+================================================================================
+MSG: dynamic_reconfigure/Group
+string name
+string type
+ParamDescription[] parameters
+int32 parent 
+int32 id
+
+================================================================================
+MSG: dynamic_reconfigure/ParamDescription
+string name
+string type
+uint32 level
+string description
+string edit_method
+
+================================================================================
+MSG: dynamic_reconfigure/Config
+BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', digest='757ce9d44ba8ddd801bb30bc456f946f', msgcount=1, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velodyne_nodelet_manager_transform/parameter_updates': TopicInfo(msgtype='dynamic_reconfigure/msg/Config', msgdef='BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', msgcount=1, connections=[Connection(id=30, topic='/velodyne_nodelet_manager_transform/parameter_updates', msgtype='dynamic_reconfigure/msg/Config', msgdef='BoolParameter[] bools
+IntParameter[] ints
+StrParameter[] strs
+DoubleParameter[] doubles
+GroupState[] groups
+
+================================================================================
+MSG: dynamic_reconfigure/BoolParameter
+string name
+bool value
+
+================================================================================
+MSG: dynamic_reconfigure/IntParameter
+string name
+int32 value
+
+================================================================================
+MSG: dynamic_reconfigure/StrParameter
+string name
+string value
+
+================================================================================
+MSG: dynamic_reconfigure/DoubleParameter
+string name
+float64 value
+
+================================================================================
+MSG: dynamic_reconfigure/GroupState
+string name
+bool state
+int32 id
+int32 parent
+', digest='958f16a05573709014982821e6822580', msgcount=1, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=1), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velodyne_packets': TopicInfo(msgtype='velodyne_msgs/msg/VelodyneScan', msgdef="# Velodyne LIDAR scan packets.
+
+Header           header         # standard ROS message header
+VelodynePacket[] packets        # vector of raw packets
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: velodyne_msgs/VelodynePacket
+# Raw Velodyne LIDAR packet.
+
+time stamp              # packet timestamp
+uint8[1206] data        # packet contents
+
+", msgcount=891, connections=[Connection(id=33, topic='/velodyne_packets', msgtype='velodyne_msgs/msg/VelodyneScan', msgdef="# Velodyne LIDAR scan packets.
+
+Header           header         # standard ROS message header
+VelodynePacket[] packets        # vector of raw packets
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: velodyne_msgs/VelodynePacket
+# Raw Velodyne LIDAR packet.
+
+time stamp              # packet timestamp
+uint8[1206] data        # packet contents
+
+", digest='50804fc9533a0e579e6322c04ae70566', msgcount=891, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)]), '/velodyne_points': TopicInfo(msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', msgcount=882, connections=[Connection(id=40, topic='/velodyne_points', msgtype='sensor_msgs/msg/PointCloud2', msgdef='# This message holds a collection of N-dimensional points, which may
+# contain additional information such as normals, intensity, etc. The
+# point data is stored as a binary blob, its layout described by the
+# contents of the "fields" array.
+
+# The point cloud data may be organized 2d (image-like) or 1d
+# (unordered). Point clouds organized as 2d images may be produced by
+# camera depth sensors such as stereo or time-of-flight.
+
+# Time of sensor data acquisition, and the coordinate frame ID (for 3d
+# points).
+Header header
+
+# 2D structure of the point cloud. If the cloud is unordered, height is
+# 1 and width is the length of the point cloud.
+uint32 height
+uint32 width
+
+# Describes the channels and their layout in the binary data blob.
+PointField[] fields
+
+bool    is_bigendian # Is this data bigendian?
+uint32  point_step   # Length of a point in bytes
+uint32  row_step     # Length of a row in bytes
+uint8[] data         # Actual point data, size is (row_step*height)
+
+bool is_dense        # True if there are no invalid points
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called \'secs\')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called \'nsecs\')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+================================================================================
+MSG: sensor_msgs/PointField
+# This message holds the description of one point entry in the
+# PointCloud2 message format.
+uint8 INT8    = 1
+uint8 UINT8   = 2
+uint8 INT16   = 3
+uint8 UINT16  = 4
+uint8 INT32   = 5
+uint8 UINT32  = 6
+uint8 FLOAT32 = 7
+uint8 FLOAT64 = 8
+
+string name      # Name of field
+uint32 offset    # Offset from start of point struct
+uint8  datatype  # Datatype enumeration, see above
+uint32 count     # How many elements in the field
+', digest='1158d486dd51d683ce2f1be655c3c181', msgcount=882, ext=ConnectionExtRosbag1(callerid='/play_1755016774934480297', latching=0), owner=<rosbags.rosbag1.reader.Reader object at 0x734bfa08c380>)])}

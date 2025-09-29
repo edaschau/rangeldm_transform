@@ -10,7 +10,7 @@ ddim: True
 ddpm_num_inference_steps: 50 
 with_vae: True
 vae_config: ../vae/configs/kitti360.yaml
-vae_checkpoint: path_to_vae_checkpoint_ckpt_file
+vae_checkpoint: ../vae/last.ckpt
 block_out_channels: [128, 128, 256, 256]  # unet block out channels
 inpainting: 0.0625 # mask rate
 upsample: null
@@ -44,6 +44,6 @@ ddpm_num_steps: 1000
 ddpm_beta_schedule: linear
 checkpointing_steps: 500   # Save a checkpoint of the training state every X updates. These checkpoints are only suitable for resuming  training using `--resume_from_checkpoint`.
 checkpoints_total_limit: 10  # Max number of checkpoints to store.
-resume_from_checkpoint: null # Whether training should be resumed from a previous checkpoint. Use a path saved by  `--checkpointing_steps`, or `"latest"` to automatically select the last available checkpoint.
+resume_from_checkpoint: latest # Whether training should be resumed from a previous checkpoint. Use a path saved by  `--checkpointing_steps`, or `"latest"` to automatically select the last available checkpoint.
 enable_xformers_memory_efficient_attention: False  # Whether or not to use xformers.
 snr_gamma: null  # SNR weighting gamma to be used if rebalancing the loss. Recommended value is 5.0. More details here: https://arxiv.org/abs/2303.09556.

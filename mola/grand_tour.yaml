@@ -1,0 +1,41 @@
+# Modified MOLA Configuration for ANYmal with 3 LiDARs
+
+modules:
+  # Input from ROS bag
+  - type: "Rosbag2Dataset"
+    name: "input_ros2"
+    params:
+      rosbag_filename: "/home/eda/Desktop/KIT_robotics/RangeLDM/anymal_merged"
+      pointclouds:
+        - topic: "/anymal/velodyne/points_undistorted"
+          sensor_label: "velodyne"
+          frame_id: "velodyne_lidar"
+        - topic: "/boxi/hesai/points"
+          sensor_label: "hesai"
+          frame_id: "hesai_lidar"
+        - topic: "/boxi/livox/points_undistorted"
+          sensor_label: "livox"
+          frame_id: "livox_lidar"
+      tf_topic: "/tf"
+      tf_static_topic: "/tf_static"
+
+  # Use default pipeline from mola_lidar_odometry
+  - type: "LidarOdometry"
+    name: "lidar_odom"
+    params:
+      $include{/opt/ros/jazzy/share/mola_lidar_odometry/pipelines/lidar3d-default.yaml}
+      # Override just what we need
+      lidar_sensor_labels: ["velodyne", "hesai", "livox"]
+
+  # ROS2 Bridge
+  - type: "BridgeROS2"
+    name: "ros2_bridge" 
+    params:
+      publish_map: true
+      map_topic: "/mola/map"
+      publish_point_clouds: true
+      pointcloud_topic: "/mola/merged_cloud"
+      publish_trajectory: true
+      trajectory_topic: "/mola/trajectory"
+      publish_tf: false
+      publish_rate_hz: 10.0

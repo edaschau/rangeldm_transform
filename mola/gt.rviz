@@ -1,0 +1,75 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /TF1
+        - /PointCloud2 - Velodyne1
+        - /PointCloud2 - Hesai1
+        - /PointCloud2 - Livox1
+        - /PointCloud2 - Merged1
+        - /PointCloud2 - Map1
+      Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Value: true
+      Plane Cell Count: 100
+      Reference Frame: dlio_map
+      
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Value: true
+      Frame Timeout: 15
+      Show Names: true
+      Show Axes: true
+      Show Arrows: false
+      Marker Scale: 0.5
+      
+    - Class: rviz_default_plugins/PointCloud2
+      Name: PointCloud2 - Velodyne
+      Topic: /anymal/velodyne/points_undistorted
+      Size (m): 0.01
+      Color Transformer: FlatColor
+      Color: 255; 0; 0
+      Alpha: 0.3
+      
+    - Class: rviz_default_plugins/PointCloud2
+      Name: PointCloud2 - Hesai
+      Topic: /boxi/hesai/points
+      Size (m): 0.01
+      Color Transformer: FlatColor
+      Color: 0; 255; 0
+      Alpha: 0.3
+      
+    - Class: rviz_default_plugins/PointCloud2
+      Name: PointCloud2 - Livox
+      Topic: /boxi/livox/points_undistorted
+      Size (m): 0.01
+      Color Transformer: FlatColor
+      Color: 0; 0; 255
+      Alpha: 0.3
+      
+    - Class: rviz_default_plugins/PointCloud2
+      Name: PointCloud2 - Merged
+      Topic: /mola/merged_cloud
+      Size (m): 0.02
+      Color Transformer: Intensity
+      
+    - Class: rviz_default_plugins/PointCloud2
+      Name: PointCloud2 - Map
+      Topic: /mola/map
+      Size (m): 0.05
+      Color Transformer: Intensity
+      
+    - Class: rviz_default_plugins/Path
+      Name: Trajectory
+      Topic: /mola/trajectory
+      Color: 255; 255; 0
+      
+  Global Options:
+    Fixed Frame: dlio_map
+    Frame Rate: 30

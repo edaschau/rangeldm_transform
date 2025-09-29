@@ -1,0 +1,68 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Plane: XY
+      Plane Cell Count: 100
+      Reference Frame: base
+
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Show Names: true
+      Show Axes: true
+      Show Arrows: true
+      Reference Frame: base
+
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Velodyne Aligned
+      Topic: /aligned/velodyne/points
+      Color: 255; 0; 0
+      Size (m): 0.01
+      Style: Flat Squares
+      Use Fixed Frame: true
+      Reliability Policy: Best Effort
+
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Hesai Aligned
+      Topic: /aligned/hesai/points
+      Color: 0; 255; 0
+      Size (m): 0.01
+      Style: Flat Squares
+      Use Fixed Frame: true
+      Reliability Policy: Best Effort
+
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Livox Aligned
+      Topic: /aligned/livox/points
+      Color: 0; 0; 255
+      Size (m): 0.01
+      Style: Flat Squares
+      Use Fixed Frame: true
+      Reliability Policy: Best Effort
+
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Merged Cloud
+      Topic: /aligned/merged_cloud
+      Color Transformer: AxisColor
+      Size (m): 0.02
+      Style: Flat Squares
+      Use Fixed Frame: true
+      Reliability Policy: Best Effort
+
+  Global Options:
+    Fixed Frame: base
+    Frame Rate: 30
+
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 20
+      Pitch: 0.5
+      Yaw: 0.5

@@ -1,0 +1,21 @@
+digraph G {
+"LF_HAA_drive" -> "LF_HIP"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"LF_HFE_output" -> "LF_THIGH"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"LF_KFE_drive" -> "LF_SHANK"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"LH_HAA_drive" -> "LH_HIP"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"LH_HFE_output" -> "LH_THIGH"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"LH_KFE_drive" -> "LH_SHANK"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"RF_HAA_drive" -> "RF_HIP"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"RF_HFE_output" -> "RF_THIGH"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"RF_KFE_drive" -> "RF_SHANK"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"RH_HAA_drive" -> "RH_HIP"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"RH_HFE_output" -> "RH_THIGH"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"RH_KFE_drive" -> "RH_SHANK"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"base" -> "odom"[label=" Broadcaster: default_authority\nAverage rate: 100.195\nBuffer length: 5.0\nMost recent transform: 1730563894.218068\nOldest transform: 1730563889.217839\n"];
+"hesai_lidar" -> "dlio_odom"[label=" Broadcaster: default_authority\nAverage rate: 100.2\nBuffer length: 5.0\nMost recent transform: 1730563894.224153\nOldest transform: 1730563889.224154\n"];
+"hesai_lidar" -> "dlio_map"[label=" Broadcaster: default_authority\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1730563894.194\nOldest transform: 1730563889.294075\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1755697735.775526"[ shape=plaintext ] ;
+}->"hesai_lidar";
+}

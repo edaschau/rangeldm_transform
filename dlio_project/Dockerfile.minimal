@@ -1,0 +1,17 @@
+FROM ros:noetic-robot-focal
+
+SHELL ["/bin/bash", "-c"]
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install build tools AND all known DLIO dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    # Basic tools
+    git wget nano curl build-essential python3-pip python3-catkin-tools sudo \
+    # PPA tool
+    software-properties-common \
+    # DLIO Dependencies
+    libpcl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create a non-root user
+# ... (rest of your Dockerfile is fine) ...

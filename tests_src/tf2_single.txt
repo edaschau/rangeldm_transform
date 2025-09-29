@@ -1,0 +1,552 @@
+Inspecting static transforms on topic '/tf_static' in bag: anymal_tf_ros2
+
+--- Found 110 transform(s) in a message at timestamp 1730563873000000000 ---
+  Parent Frame: 'LF_HFE_drive'
+  Child Frame:  'LF_thigh_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.7071, w: 0.7071]
+
+  Parent Frame: 'LF_HIP'
+  Child Frame:  'LF_hip_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'LF_THIGH'
+  Child Frame:  'LF_HFE_drive'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'LF_hip_fixed'
+  Child Frame:  'LF_HFE_output'
+    - Translation: [x: 0.0690, y: 0.0060, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: -0.7071, w: 0.7071]
+
+  Parent Frame: 'LF_SHANK'
+  Child Frame:  'LF_shank_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: -0.7071, w: 0.7071]
+
+  Parent Frame: 'LF_shank_fixed'
+  Child Frame:  'LF_FOOT'
+    - Translation: [x: 0.1000, y: 0.0174, z: -0.3920]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'LF_thigh_fixed'
+  Child Frame:  'LF_KFE_drive'
+    - Translation: [x: 0.0000, y: 0.1805, z: -0.2850]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.7071, w: 0.7071]
+
+  Parent Frame: 'LH_HFE_drive'
+  Child Frame:  'LH_thigh_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.7071, w: 0.7071]
+
+  Parent Frame: 'LH_HIP'
+  Child Frame:  'LH_hip_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 1.0000, w: -0.0000]
+
+  Parent Frame: 'LH_THIGH'
+  Child Frame:  'LH_HFE_drive'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'LH_hip_fixed'
+  Child Frame:  'LH_HFE_output'
+    - Translation: [x: -0.0690, y: 0.0060, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: -0.7071, w: 0.7071]
+
+  Parent Frame: 'LH_SHANK'
+  Child Frame:  'LH_shank_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: -0.7071, w: 0.7071]
+
+  Parent Frame: 'LH_shank_fixed'
+  Child Frame:  'LH_FOOT'
+    - Translation: [x: -0.1000, y: 0.0174, z: -0.3920]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'LH_thigh_fixed'
+  Child Frame:  'LH_KFE_drive'
+    - Translation: [x: 0.0000, y: 0.1805, z: -0.2850]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.7071, w: 0.7071]
+
+  Parent Frame: 'RF_HFE_drive'
+  Child Frame:  'RF_thigh_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: -0.7071, w: 0.7071]
+
+  Parent Frame: 'RF_HIP'
+  Child Frame:  'RF_hip_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'RF_THIGH'
+  Child Frame:  'RF_HFE_drive'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'RF_hip_fixed'
+  Child Frame:  'RF_HFE_output'
+    - Translation: [x: 0.0690, y: -0.0060, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.7071, w: 0.7071]
+
+  Parent Frame: 'RF_SHANK'
+  Child Frame:  'RF_shank_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.7071, w: 0.7071]
+
+  Parent Frame: 'RF_shank_fixed'
+  Child Frame:  'RF_FOOT'
+    - Translation: [x: 0.1000, y: -0.0174, z: -0.3920]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'RF_thigh_fixed'
+  Child Frame:  'RF_KFE_drive'
+    - Translation: [x: 0.0000, y: -0.1805, z: -0.2850]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: -0.7071, w: 0.7071]
+
+  Parent Frame: 'RH_HFE_drive'
+  Child Frame:  'RH_thigh_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: -0.7071, w: 0.7071]
+
+  Parent Frame: 'RH_HIP'
+  Child Frame:  'RH_hip_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 1.0000, w: -0.0000]
+
+  Parent Frame: 'RH_THIGH'
+  Child Frame:  'RH_HFE_drive'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'RH_hip_fixed'
+  Child Frame:  'RH_HFE_output'
+    - Translation: [x: -0.0690, y: -0.0060, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.7071, w: 0.7071]
+
+  Parent Frame: 'RH_SHANK'
+  Child Frame:  'RH_shank_fixed'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.7071, w: 0.7071]
+
+  Parent Frame: 'RH_shank_fixed'
+  Child Frame:  'RH_FOOT'
+    - Translation: [x: -0.1000, y: -0.0174, z: -0.3920]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'RH_thigh_fixed'
+  Child Frame:  'RH_KFE_drive'
+    - Translation: [x: 0.0000, y: -0.1805, z: -0.2850]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: -0.7071, w: 0.7071]
+
+  Parent Frame: 'base'
+  Child Frame:  'LF_HAA_drive'
+    - Translation: [x: 0.3040, y: 0.1090, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'LH_HAA_drive'
+    - Translation: [x: -0.3040, y: 0.1090, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 1.0000, w: -0.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'RF_HAA_drive'
+    - Translation: [x: 0.3040, y: -0.1090, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'RH_HAA_drive'
+    - Translation: [x: -0.3040, y: -0.1090, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 1.0000, w: -0.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'battery'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'bottom_shell'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'face_front'
+    - Translation: [x: 0.4087, y: 0.0000, z: 0.0205]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'face_rear'
+    - Translation: [x: -0.4087, y: 0.0000, z: 0.0205]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 1.0000, w: 0.0000]
+
+  Parent Frame: 'face_front'
+  Child Frame:  'face_shell_front'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'face_rear'
+  Child Frame:  'face_shell_rear'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'hatch_shell'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'hbc_receiver'
+    - Translation: [x: -0.0435, y: 0.0000, z: 0.1440]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'base_inertia'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'body_top'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.1440]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'depth_camera_left_camera'
+    - Translation: [x: -0.0250, y: 0.0923, z: 0.0123]
+    - Rotation (q): [x: -0.2581, y: 0.2508, z: 0.6611, w: 0.6583]
+
+  Parent Frame: 'base'
+  Child Frame:  'depth_camera_right_camera'
+    - Translation: [x: 0.0250, y: -0.0923, z: 0.0123]
+    - Rotation (q): [x: 0.2506, y: 0.2441, z: -0.6636, w: 0.6612]
+
+  Parent Frame: 'base'
+  Child Frame:  'docking_socket'
+    - Translation: [x: 0.2613, y: 0.0000, z: -0.0621]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'lidar_parent'
+    - Translation: [x: -0.3100, y: 0.0000, z: 0.1585]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.7071, w: 0.7071]
+
+  Parent Frame: 'base'
+  Child Frame:  'top_shell'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'depth_camera_front_lower_camera'
+  Child Frame:  'depth_camera_front_lower_camera_parent'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 1.0000, y: 0.0000, z: 0.0000, w: 0.0000]
+
+  Parent Frame: 'depth_camera_front_upper_camera'
+  Child Frame:  'depth_camera_front_upper_camera_parent'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 1.0000, y: 0.0000, z: 0.0000, w: 0.0000]
+
+  Parent Frame: 'depth_camera_left_camera'
+  Child Frame:  'depth_camera_left_camera_parent'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'depth_camera_rear_lower_camera'
+  Child Frame:  'depth_camera_rear_lower_camera_parent'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 1.0000, y: 0.0000, z: 0.0000, w: 0.0000]
+
+  Parent Frame: 'depth_camera_rear_upper_camera'
+  Child Frame:  'depth_camera_rear_upper_camera_parent'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 1.0000, y: 0.0000, z: 0.0000, w: 0.0000]
+
+  Parent Frame: 'depth_camera_right_camera'
+  Child Frame:  'depth_camera_right_camera_parent'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'face_front'
+  Child Frame:  'depth_camera_front_lower_camera'
+    - Translation: [x: -0.0403, y: -0.0250, z: -0.0805]
+    - Rotation (q): [x: -0.0004, y: 0.4972, z: 0.0002, w: 0.8677]
+
+  Parent Frame: 'face_front'
+  Child Frame:  'depth_camera_front_upper_camera'
+    - Translation: [x: -0.0099, y: -0.0250, z: -0.0410]
+    - Rotation (q): [x: 0.0003, y: 0.1299, z: -0.0000, w: 0.9915]
+
+  Parent Frame: 'face_front'
+  Child Frame:  'wide_angle_camera_front_camera'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'face_rear'
+  Child Frame:  'depth_camera_rear_lower_camera'
+    - Translation: [x: -0.0403, y: -0.0250, z: -0.0805]
+    - Rotation (q): [x: 0.0108, y: 0.5042, z: -0.0063, w: 0.8635]
+
+  Parent Frame: 'face_rear'
+  Child Frame:  'depth_camera_rear_upper_camera'
+    - Translation: [x: -0.0099, y: -0.0250, z: -0.0410]
+    - Rotation (q): [x: 0.0064, y: 0.1382, z: -0.0009, w: 0.9904]
+
+  Parent Frame: 'face_rear'
+  Child Frame:  'wide_angle_camera_rear_camera'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'imu_link'
+    - Translation: [x: -0.2556, y: 0.0026, z: 0.0767]
+    - Rotation (q): [x: 0.0000, y: 1.0000, z: 0.0000, w: 0.0000]
+
+  Parent Frame: 'wide_angle_camera_front_camera'
+  Child Frame:  'wide_angle_camera_front_camera_parent'
+    - Translation: [x: -0.0042, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.5000, y: -0.5000, z: 0.5000, w: -0.5000]
+
+  Parent Frame: 'wide_angle_camera_rear_camera'
+  Child Frame:  'wide_angle_camera_rear_camera_parent'
+    - Translation: [x: -0.0042, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.5000, y: -0.5000, z: 0.5000, w: -0.5000]
+
+  Parent Frame: 'base'
+  Child Frame:  'anymal_imu'
+    - Translation: [x: -0.2556, y: 0.0026, z: 0.0767]
+    - Rotation (q): [x: 0.0000, y: 1.0000, z: 0.0000, w: 0.0000]
+
+  Parent Frame: 'depth_camera_front_lower_camera_parent'
+  Child Frame:  'depth_camera_front_lower_depth_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'depth_camera_front_lower_depth_frame'
+  Child Frame:  'depth_camera_front_lower_depth_optical_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_front_lower_depth_frame'
+  Child Frame:  'depth_camera_front_lower'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_front_upper_camera_parent'
+  Child Frame:  'depth_camera_front_upper_depth_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'depth_camera_front_upper_depth_frame'
+  Child Frame:  'depth_camera_front_upper_depth_optical_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_front_upper_depth_frame'
+  Child Frame:  'depth_camera_front_upper'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_rear_lower_camera_parent'
+  Child Frame:  'depth_camera_rear_lower_depth_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'depth_camera_rear_lower_depth_frame'
+  Child Frame:  'depth_camera_rear_lower_depth_optical_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_rear_lower_depth_frame'
+  Child Frame:  'depth_camera_rear_lower'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_rear_upper_camera_parent'
+  Child Frame:  'depth_camera_rear_upper_depth_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'depth_camera_rear_upper_depth_frame'
+  Child Frame:  'depth_camera_rear_upper_depth_optical_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_rear_upper_depth_frame'
+  Child Frame:  'depth_camera_rear_upper'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_left_camera_parent'
+  Child Frame:  'depth_camera_left_depth_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'depth_camera_left_depth_frame'
+  Child Frame:  'depth_camera_left_depth_optical_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_left_depth_frame'
+  Child Frame:  'depth_camera_left'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_right_camera_parent'
+  Child Frame:  'depth_camera_right_depth_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'depth_camera_right_depth_frame'
+  Child Frame:  'depth_camera_right_depth_optical_frame'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'depth_camera_right_depth_frame'
+  Child Frame:  'depth_camera_right'
+    - Translation: [x: 0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: -0.5000, y: 0.5000, z: -0.5000, w: 0.5000]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'box_base_model'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'box_base'
+    - Translation: [x: 0.0764, y: -0.0361, z: 0.2803]
+    - Rotation (q): [x: 1.0000, y: 0.0000, z: 0.0000, w: 0.0000]
+
+  Parent Frame: 'hdr_base'
+  Child Frame:  'hdr_front'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'hdr_base'
+  Child Frame:  'hdr_left'
+    - Translation: [x: -0.1026, y: -0.0011, z: -0.0790]
+    - Rotation (q): [x: 0.0055, y: -0.7684, z: 0.0037, w: 0.6399]
+
+  Parent Frame: 'hdr_base'
+  Child Frame:  'hdr_right'
+    - Translation: [x: 0.1045, y: 0.0006, z: -0.0765]
+    - Rotation (q): [x: -0.0025, y: 0.7633, z: -0.0001, w: 0.6460]
+
+  Parent Frame: 'livox_lidar'
+  Child Frame:  'livox_imu'
+    - Translation: [x: 0.0065, y: 0.0244, z: -0.0417]
+    - Rotation (q): [x: 0.0009, y: 0.0015, z: 0.0050, w: 1.0000]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'livox_lidar'
+    - Translation: [x: 0.3031, y: -0.0467, z: -0.1096]
+    - Rotation (q): [x: 0.0069, y: -0.0016, z: 0.0009, w: 1.0000]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'zed2i_base'
+    - Translation: [x: 0.3880, y: -0.0472, z: 0.1316]
+    - Rotation (q): [x: 0.0066, y: -0.0867, z: 0.0017, w: 0.9962]
+
+  Parent Frame: 'zed2i_base'
+  Child Frame:  'zed2i_imu'
+    - Translation: [x: -0.0246, y: 0.0343, z: 0.0189]
+    - Rotation (q): [x: -0.0023, y: -0.0005, z: -0.0038, w: 1.0000]
+
+  Parent Frame: 'zed2i_base'
+  Child Frame:  'zed2i_right'
+    - Translation: [x: -0.0100, y: 0.0600, z: 0.0150]
+    - Rotation (q): [x: 0.5000, y: 0.5000, z: 0.5000, w: 0.5000]
+
+  Parent Frame: 'zed2i_base'
+  Child Frame:  'zed2i_left'
+    - Translation: [x: -0.0096, y: -0.0598, z: 0.0153]
+    - Rotation (q): [x: 0.4988, y: 0.5010, z: 0.4999, w: 0.5002]
+
+  Parent Frame: 'base'
+  Child Frame:  'cpt7_antenna_back_model'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'prism_model'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'prism'
+    - Translation: [x: 0.3088, y: -0.0383, z: -0.2349]
+    - Rotation (q): [x: -0.0057, y: -0.0014, z: -0.0047, w: 1.0000]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'adis16475_imu'
+    - Translation: [x: 0.1933, y: -0.0185, z: 0.0789]
+    - Rotation (q): [x: -0.7047, y: 0.7095, z: 0.0066, w: 0.0053]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'alphasense_base'
+    - Translation: [x: 0.3690, y: -0.0460, z: 0.0680]
+    - Rotation (q): [x: 0.4549, y: 0.4545, z: 0.5418, w: 0.5412]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'ap20_imu'
+    - Translation: [x: 0.0029, y: -0.1050, z: 0.0015]
+    - Rotation (q): [x: -0.7023, y: -0.0028, z: 0.0035, w: 0.7118]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'cpt7_imu'
+    - Translation: [x: 0.0000, y: 0.0000, z: 0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'hdr_base'
+    - Translation: [x: 0.3696, y: -0.0462, z: 0.1027]
+    - Rotation (q): [x: 0.4993, y: 0.5006, z: 0.5030, w: 0.4970]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'hesai_lidar'
+    - Translation: [x: 0.3025, y: -0.0425, z: -0.0128]
+    - Rotation (q): [x: 0.7093, y: -0.7049, z: -0.0039, w: -0.0044]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'alphasense_imu'
+    - Translation: [x: 0.3085, y: -0.0580, z: 0.0608]
+    - Rotation (q): [x: 0.0072, y: 0.0367, z: 0.0079, w: 0.9993]
+
+  Parent Frame: 'box_base'
+  Child Frame:  'stim320_imu'
+    - Translation: [x: 0.2861, y: -0.0705, z: 0.1582]
+    - Rotation (q): [x: 1.0000, y: 0.0051, z: -0.0010, w: -0.0059]
+
+  Parent Frame: 'base'
+  Child Frame:  'lidar'
+    - Translation: [x: -0.3100, y: 0.0000, z: 0.1585]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 1.0000, w: 0.0000]
+
+  Parent Frame: 'base'
+  Child Frame:  'velodyne_lidar'
+    - Translation: [x: -0.3100, y: 0.0000, z: 0.1585]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 1.0000, w: 0.0000]
+
+  Parent Frame: 'alphasense_base'
+  Child Frame:  'alphasense_right'
+    - Translation: [x: 0.1040, y: 0.0137, z: -0.0684]
+    - Rotation (q): [x: -0.0114, y: 0.6979, z: 0.1241, w: 0.7052]
+
+  Parent Frame: 'alphasense_base'
+  Child Frame:  'alphasense_left'
+    - Translation: [x: -0.1025, y: 0.0112, z: -0.0701]
+    - Rotation (q): [x: 0.0012, y: -0.6992, z: -0.1183, w: 0.7050]
+
+  Parent Frame: 'alphasense_base'
+  Child Frame:  'alphasense_front_right'
+    - Translation: [x: 0.0550, y: 0.0011, z: -0.0004]
+    - Rotation (q): [x: 0.0007, y: 0.0005, z: -0.0017, w: 1.0000]
+
+  Parent Frame: 'alphasense_base'
+  Child Frame:  'alphasense_front_left'
+    - Translation: [x: -0.0551, y: -0.0003, z: 0.0005]
+    - Rotation (q): [x: 0.0005, y: -0.0012, z: 0.0086, w: 1.0000]
+
+  Parent Frame: 'alphasense_base'
+  Child Frame:  'alphasense_front_center'
+    - Translation: [x: -0.0000, y: -0.0000, z: -0.0000]
+    - Rotation (q): [x: 0.0000, y: 0.0000, z: 0.0000, w: 1.0000]
