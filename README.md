@@ -79,4 +79,4 @@ The UNet is auto-configured: 9 input channels (4 noisy latent + 4 masked latent 
 - `mola/` — MOLA SLAM config (experimental)
 - `tests_src/` — Bag inspection, TF analysis, visualization launch files
 
-Contact: zydwork@outlook.com
+Contact: edaschau@outlook.com
