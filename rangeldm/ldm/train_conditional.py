@@ -313,27 +313,62 @@ def main(args):
         eps=args.adam_epsilon,
     )
 
-    # Get the datasets: you can either provide your own training and evaluation files (see below)
-    # or specify a Dataset from the hub (the dataset will be downloaded automatically from the datasets Hub).
-
-    from kitti360_range_image import KITTIRangeLoader
-
-    loader = KITTIRangeLoader(os.environ.get('KITTI360_DATASET'), 
-                                        batch_size=args.train_batch_size, 
-                                        num_workers=args.dataloader_num_workers, 
-                                        downsample=args.upsample,
-                                        inpainting=args.inpainting
-                                        )
-    train_dataloader = loader.train_dataloader()
-    loader = KITTIRangeLoader(os.environ.get('KITTI360_DATASET'), 
-                                        batch_size=args.eval_batch_size, 
-                                        num_workers=args.dataloader_num_workers, 
-                                        downsample=args.upsample,
-                                        inpainting=args.inpainting
-                                        )
-    test_dataloader = loader.val_dataloader()
-    test_dataset = loader.test_dataset
-    to_range = loader.test_dataset.to_range_image
+    # Get the datasets
+    if hasattr(args, 'grand_tour') and args.grand_tour:
+        from grand_tour_range_image import GrandTourRangeLoader
+        
+        # Use grand_tour_path from config if provided, otherwise use relative path
+        if hasattr(args, 'grand_tour_path') and args.grand_tour_path:
+            grand_tour_path = args.grand_tour_path
+        else:
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            grand_tour_path = os.path.abspath(os.path.join(script_dir, '../../grand_tour_dataset/data_ros2/anymal_hesai_ros2'))
+        
+        loader = GrandTourRangeLoader(
+            grand_tour_path=grand_tour_path,
+            batch_size=args.train_batch_size,
+            num_workers=args.dataloader_num_workers,
+            downsample=args.upsample if hasattr(args, 'upsample') else None,
+            inpainting=args.inpainting if hasattr(args, 'inpainting') else None,
+            topic_name='/boxi/hesai/points',
+            num_beams=32
+        )
+        train_dataloader = loader.train_dataloader()
+        
+        # Use the same loader for test
+        test_loader = GrandTourRangeLoader(
+            grand_tour_path=grand_tour_path,
+            batch_size=args.eval_batch_size,
+            num_workers=args.dataloader_num_workers,
+            downsample=args.upsample if hasattr(args, 'upsample') else None,
+            inpainting=args.inpainting if hasattr(args, 'inpainting') else None,
+            topic_name='/boxi/hesai/points',
+            num_beams=32
+        )
+        test_dataloader = test_loader.val_dataloader()
+        test_dataset = test_loader.test_dataset
+        to_range = test_loader.test_dataset.to_range_image
+    else:
+        from kitti360_range_image import KITTIRangeLoader
+        
+        loader = KITTIRangeLoader(
+            os.environ.get('KITTI360_DATASET'),
+            batch_size=args.train_batch_size,
+            num_workers=args.dataloader_num_workers,
+            downsample=args.upsample if hasattr(args, 'upsample') else None,
+            inpainting=args.inpainting if hasattr(args, 'inpainting') else None
+        )
+        train_dataloader = loader.train_dataloader()
+        
+        loader = KITTIRangeLoader(os.environ.get('KITTI360_DATASET'), 
+                                  batch_size=args.eval_batch_size, 
+                                  num_workers=args.dataloader_num_workers, 
+                                  downsample=args.upsample,
+                                  inpainting=args.inpainting
+                                  )
+        test_dataloader = loader.val_dataloader()
+        test_dataset = loader.test_dataset
+        to_range = loader.test_dataset.to_range_image
 
     # Initialize the learning rate scheduler
     lr_scheduler = get_scheduler(
